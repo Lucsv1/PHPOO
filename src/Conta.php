@@ -3,47 +3,40 @@
 class Conta
 {
 
-   private string $cpfTitular;
-   private string $nomeTitular;
-   private float $saldo;
+   private static $numeroContas = 0;
 
-   //GETTERS AND SETTERS
-   public function getCpfTitular(){
-      return $this->cpfTitular;
+   public function __construct(
+      public readonly string $cpfTitular, 
+      public readonly string $nomeTitular, 
+      public float $saldo,
+      )
+   {
+      $this->verificarNome($nomeTitular);
+      Conta::$numeroContas++;
    }
 
-   public function setCpfTitular(string $cpf ): void{
-      $this->cpfTitular = $cpf;
+   public static function getNumeroContas() : int{
+      return Conta::$numeroContas++;
    }
 
-   
-   public function getNomeTitular(){
-      return $this->nomeTitular;
+   private function verificarNome(string $nomeTitular){
+      if (strlen($nomeTitular) < 5){
+         echo "Nome deve conter no minimo 5 caracteres";
+         exit;
+      }
+
+      return;
+
    }
 
-   public function setNomeTitular(string $nomeTitular): void{
-      $this->nomeTitular = $nomeTitular;
-   }
 
-   
-   public function getSaldo(){
-      return $this->saldo;
-   }
-
-   public function setSaldo(float $saldo): void{
-      $this->saldo = $saldo;
-   }
-      
-   //Metodos
-
-   public function sacar(float $valorSacar): void
+   public  function sacar(float $valorSacar): void
    {
       if ($valorSacar > $this->saldo) {
          echo "valor acima";
          return;
       }
       $this->saldo -= $valorSacar;
-
 
    }
 
@@ -61,10 +54,10 @@ class Conta
       if ($valorTransferir > $this->saldo) {
          echo "Saldo indisponivel";
          return;
-      } 
-         $this->sacar($valorTransferir);
-         $contaDestino->depositar($valorTransferir);
-   
+      }
+      $this->sacar($valorTransferir);
+      $contaDestino->depositar($valorTransferir);
+
    }
 
 }

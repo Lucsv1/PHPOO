@@ -7,6 +7,10 @@ Class CadastroPessoas{
         $this->pessoas = [];
     }
 
+    public function getPessoas (){
+        return $this->pessoas;
+    }
+
     public function adicionarPessoa(Pessoa $pessoas){
         $this->pessoas[] = $pessoas;
 
