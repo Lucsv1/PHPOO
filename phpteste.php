@@ -1,10 +1,11 @@
 <?php
 
+
 require_once "src/Conta.php";
+require_once "src/Titular.php";
 
-$conta = new Conta ("123", "LUCAS VIN", 123);
-
-$conta1 = new Conta ("321", "joaoS", 123);
+$conta = new Conta(new Titular ("123", "LUCAS VIN"));
+$conta1 = new Conta(new Titular ("321", "joaoS", 123));
 
 
 

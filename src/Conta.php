@@ -6,31 +6,28 @@ class Conta
    private static $numeroContas = 0;
 
    public function __construct(
-      public readonly string $cpfTitular, 
-      public readonly string $nomeTitular, 
+      public readonly string $cpfTitular,
+      public readonly string $titular,
       public float $saldo,
-      )
-   {
-      $this->verificarNome($nomeTitular);
-      Conta::$numeroContas++;
+   ) {
+      $this->verificarNome($titular);
+      self::$numeroContas++;
    }
 
-   public static function getNumeroContas() : int{
+   public function __destruct()
+   {
+      if (self::$numeroContas > 1) {
+         echo "So pode conter uma conta so";
+      }
+
+   }
+
+   public static function getNumeroContas(): int
+   {
       return Conta::$numeroContas++;
    }
 
-   private function verificarNome(string $nomeTitular){
-      if (strlen($nomeTitular) < 5){
-         echo "Nome deve conter no minimo 5 caracteres";
-         exit;
-      }
-
-      return;
-
-   }
-
-
-   public  function sacar(float $valorSacar): void
+   public function sacar(float $valorSacar): void
    {
       if ($valorSacar > $this->saldo) {
          echo "valor acima";
@@ -60,6 +57,13 @@ class Conta
 
    }
 
+   public function getTitular(): string{
+      return $this->titular;
+  }
+
 }
+
+
+
 
 
