@@ -1,21 +1,24 @@
 <?php
 
 Class Pessoa{
-    private String $nome;
-    private int $idade;
+    public function __construct(
+        protected readonly string $nome,
+        protected readonly CPF $cpf,
+        
+    ){
 
+        $this->verificaNome($nome);
 
-    public function __construct(String $nome, int $idade){
-        $this->nome = $nome;
-        $this->idade = $idade;
     }
 
-    public function getNome(){
-        return $this->nome;
-    }
+    protected function verificarNome(string $nomeTitular)
+    {
+        if (strlen($nomeTitular) < 5) {
+            echo "Nome deve conter no minimo 5 caracteres";
+            exit;
+        }
 
-    public function getIdade(){
-        return $this->idade; 
-    }
+        return;
 
+    }
 }

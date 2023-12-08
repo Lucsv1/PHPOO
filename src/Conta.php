@@ -6,11 +6,10 @@ class Conta
    private static $numeroContas = 0;
 
    public function __construct(
-      public readonly string $cpfTitular,
-      public readonly string $titular,
+      public readonly Titular $titular,
       public float $saldo,
    ) {
-      $this->verificarNome($titular);
+
       self::$numeroContas++;
    }
 

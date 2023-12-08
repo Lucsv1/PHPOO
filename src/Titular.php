@@ -1,26 +1,24 @@
 <?php
 
-class Titular 
+class Titular extends Pessoa 
 {
 
     public function __construct(
-        public readonly string $name,
-        public readonly string $cpf,
+        public readonly string $nome,
+        public readonly CPF $cpf,
+        public readonly Endereco $endereco,
     ) {
-        $this->verificarNome($name);
+
+        parent::__construct($nome, $cpf);
+        $this->verificarNome($nome);
 
     }
 
-    private function verificarNome(string $nomeTitular)
-    {
-        if (strlen($nomeTitular) < 5) {
-            echo "Nome deve conter no minimo 5 caracteres";
-            exit;
-        }
+    
 
-        return;
+    
 
-    }
+    
 
 
 }
