@@ -1,11 +1,13 @@
 <?php
 
 use Alura\Banco\Model\Conta\Titular;
+use Alura\Banco\Model\Conta\Conta;
 use Alura\Banco\Model\Endereco;
 use Alura\Banco\Model\CPF;
-use Alura\Banco\Model\Conta\Conta;
 use Alura\Banco\Model\Funcionario;
 use Alura\Banco\Model\Pessoa;
+
+require_once 'autoload.php';
 
 
 $funcionario =  new Funcionario("Lucas", new CPF("123"), "cargo");
@@ -29,5 +31,25 @@ $conta1->transferir(20, $conta2);
 echo "Numero de contas " . Conta::getNumeroContas() . PHP_EOL;
 
 var_dump($conta1);
+
+// Sistema Escola
+
+// require_once "autoload2.php";
+
+// use Lucas\Banco\Model\Escola\Aluno;
+// use Lucas\Banco\Model\Escola\Professor;
+// use Lucas\Banco\Model\Sala\Sala;
+// use Lucas\Banco\Model\Sistema\SistemaNota;
+
+// $sala  = new Sala("sala 02", "2 alunos");
+// $aluno = new Aluno("Lucas", $sala, "123123123");
+// $professor = new Professor("JOTA", "4111", $sala);
+// $notas = new SistemaNota(10, 5, 3, 4);
+
+// echo "nome do aluno: " . $aluno->nome . PHP_EOL;
+// echo $notas->calcularNota();
+
+
+
 
 

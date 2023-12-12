@@ -2,7 +2,6 @@
 
 namespace Alura\Banco\Model\Conta;
 
-
 class Conta
 {
 
@@ -58,10 +57,6 @@ class Conta
       $contaDestino->depositar($valorTransferir);
 
    }
-
-   public function getTitular(): string{
-      return $this->titular;
-  }
 
 }
 
