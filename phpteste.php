@@ -1,6 +1,12 @@
 <?php
 
-require_once "Extension.php";
+use Alura\Banco\Model\Conta\Titular;
+use Alura\Banco\Model\Endereco;
+use Alura\Banco\Model\CPF;
+use Alura\Banco\Model\Conta\Conta;
+use Alura\Banco\Model\Funcionario;
+use Alura\Banco\Model\Pessoa;
+
 
 $funcionario =  new Funcionario("Lucas", new CPF("123"), "cargo");
 $Pessoa = new Pessoa("joans", new CPF("123"));

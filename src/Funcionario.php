@@ -1,6 +1,10 @@
 <?php
 
-namespace Model;
+namespace Alura\Banco\Model;
+
+use Alura\Banco\Model\Pessoa;
+use Alura\Banco\Model\CPF;
+
 Class Funcionario extends Pessoa
 {
     public function __construct(

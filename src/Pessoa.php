@@ -1,6 +1,6 @@
 <?php
 
-namespace Model;
+namespace Alura\Banco\Model;
 
 Class Pessoa{
     public function __construct(
@@ -9,7 +9,7 @@ Class Pessoa{
         
     ){
 
-        $this->verificaNome($nome);
+        $this->verificarNome($nome);
 
     }
 

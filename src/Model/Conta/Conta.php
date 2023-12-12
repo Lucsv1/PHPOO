@@ -1,6 +1,7 @@
 <?php
 
-namespace Model\Conta;
+namespace Alura\Banco\Model\Conta;
+
 
 class Conta
 {
