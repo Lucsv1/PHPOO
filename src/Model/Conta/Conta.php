@@ -1,5 +1,7 @@
 <?php
 
+namespace Model\Conta;
+
 class Conta
 {
 

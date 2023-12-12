@@ -1,5 +1,7 @@
 <?php
 
+namespace Model;
+
 Class Pessoa{
     public function __construct(
         protected readonly string $nome,

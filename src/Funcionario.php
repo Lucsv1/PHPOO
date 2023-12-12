@@ -1,5 +1,6 @@
 <?php
 
+namespace Model;
 Class Funcionario extends Pessoa
 {
     public function __construct(

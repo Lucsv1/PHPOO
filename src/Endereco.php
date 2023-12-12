@@ -1,5 +1,7 @@
 <?php
 
+namespace Model;
+
 class Endereco
 {
     public function __construct(
