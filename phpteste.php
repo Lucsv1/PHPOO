@@ -14,11 +14,11 @@ $funcionario =  new Funcionario("Lucas", new CPF("123"), "cargo");
 $Pessoa = new Pessoa("joans", new CPF("123"));
 $endereco = new Endereco("cidade", "bairro", "rua", "numero");
 $titular =  new Titular("Lucas", new CPF("123"), $endereco);
-$conta1 = new Conta($titular , 123);
+// $conta1 = new Conta($titular , 123);
 
 $endereco2 = new Endereco("cidade1" , "bairro1", "rua1", "numero1");
 $titular2 = new Titular("Joaowew",new CPF("123"), $endereco2 );
-$conta2 = new Conta($titular2 ,100);
+// $conta2 = new Conta($titular2 ,100);
 
 
 $conta2->depositar(200);
@@ -36,17 +36,19 @@ var_dump($conta1);
 
 // require_once "autoload2.php";
 
-// use Lucas\Banco\Model\Escola\Aluno;
+// use Lucas\Banco\Model\Escola\Aluno1;
 // use Lucas\Banco\Model\Escola\Professor;
 // use Lucas\Banco\Model\Sala\Sala;
 // use Lucas\Banco\Model\Sistema\SistemaNota;
 
 // $sala  = new Sala("sala 02", "2 alunos");
-// $aluno = new Aluno("Lucas", $sala, "123123123");
+// $aluno = new Aluno1("Lucas Vinicius", $sala);
 // $professor = new Professor("JOTA", "4111", $sala);
 // $notas = new SistemaNota(10, 5, 3, 4);
 
-// echo "nome do aluno: " . $aluno->nome . PHP_EOL;
+
+// echo "Nome do professor da turma: " . $professor->nome . PHP_EOL;
+// echo "nome do aluno: " . $aluno->getNomeAluno() . PHP_EOL;
 // echo $notas->calcularNota();
 
 

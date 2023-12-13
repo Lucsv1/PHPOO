@@ -3,15 +3,18 @@
 namespace Lucas\Banco\Model\Escola;
 
 use Lucas\Banco\Model\Sala\Sala;
-class Aluno{
+abstract class Aluno{
     public function __construct(
-        public string $nome,
-        public Sala $sala,
-        public string $cpf
+        protected string $nomeAluno,
+        Sala $sala,
         
     ){
 
+
+
     }
+
+    abstract protected function Funcao();
 
 
 }

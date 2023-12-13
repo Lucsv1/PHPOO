@@ -2,10 +2,10 @@
 
 namespace Alura\Banco\Model;
 
-class CPF
+final class CPF
 {
     public function __construct(
-        public readonly string $pf,
+        public readonly string $cpf,
     ) {
 
     }

@@ -2,14 +2,15 @@
 
 namespace Alura\Banco\Model;
 
+use Alura\Banco\Model\CPF;
+
 class Pessoa
 {
     public function __construct(
         protected string $nome,
-        protected  CPF $cpf,
+        protected readonly CPF $cpf,
 
     ) {
-
         $this->verificarNome($nome);
     }
 
